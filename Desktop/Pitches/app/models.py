@@ -12,7 +12,6 @@ class Pitch(db.Model):
     __tablename__ = 'pitches'
     id = db.Column(db.Integer,primary_key = True)
     pitch = db.Column(db.String(255))
-   
     users = db.relationship('User',backref = 'pitch',lazy="dynamic")
    
     def __repr__(self):
