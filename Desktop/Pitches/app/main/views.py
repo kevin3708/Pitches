@@ -22,11 +22,11 @@ def new_pitch():
         
 
         # Updated review instance
-        new_pitch = Pitch(pitch=pitch,users=pitch.users,user=current_user)
+        new_pitch = Pitch(pitch=pitch,user=current_user)
 
         # save review method
         new_pitch.save_pitch()
-        return redirect(url_for('.pitch' ))
+        return redirect(url_for('.new_pitch' ))
 
     
     return render_template('pitches/new_pitch.html',pitch_form=form)
